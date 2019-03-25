@@ -21,8 +21,13 @@ let init = (el, binding, vnode) => {
   el.addEventListener('keypress', maskHandler.bind(undefined, vnode, binding));
 };
 
+let getValue = (target, object) => {
+  let matches = object.split('.');
+  if (matches.length > 2) return getValue(target[matches.splice(0, 1)], matches.join('.'));else if (matches.length === 2) return target[matches[0]][matches[1]];else return target[matches[0]];
+};
+
 let maskHandler = (vnode, binding, event) => {
-  let mask = vnode.context[binding.expression];
+  let mask = binding.value === binding.expression.replace(/['"]+/g, '') ? binding.value : getValue(vnode.context, binding.expression);
   let oldValue = event.target.value,
       key = event.key,
       position = oldValue.length,
