@@ -4,7 +4,8 @@ let bindingPatterns = {
 	'N': new RegExp(/[0-9]/g),                          //Number
 	'A': new RegExp(/[А-Яа-яA-Za-z]/g),                 //Any letter
 	'S': new RegExp(/[авекмнорстухАВЕКМНОРТСУХ]/g),     //Vehicle registration plate
-	'V': new RegExp(/[a-zA-Z0-9]/g)                     //VIN
+	'V': new RegExp(/[a-zA-Z0-9]/g),                    //VIN
+	'H': new RegExp(/0-9авекмнорстухАВЕКМНОРТСУХ/g)		//Number and vehicle registration plate
 };
 let regexpStr = '[' + Object.keys(bindingPatterns).join('') + ']';
 let regExp = new RegExp(regexpStr, 'g');
