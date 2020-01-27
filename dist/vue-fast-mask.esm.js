@@ -28,6 +28,7 @@ let getValue = (target, object) => {
 
 let maskHandler = (vnode, binding, event) => {
   let mask = binding.value === binding.expression.replace(/['"]+/g, '') ? binding.value : getValue(vnode.context, binding.expression);
+  if (mask.length === 0) return;
   let oldValue = event.target.value,
       key = event.key,
       position = oldValue.length,
