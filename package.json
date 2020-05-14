@@ -1,6 +1,6 @@
 {
   "name": "vuefastmask",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "Really fast Vue.js mask. Works with Cyrillic symbols.",
   "main": "dist/vue-fast-mask.js",
   "module": "dist/vue-fast-mask.esm.js",

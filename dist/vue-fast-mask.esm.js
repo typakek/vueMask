@@ -11,7 +11,9 @@ let bindingPatterns = {
   //Vehicle registration plate
   'V': new RegExp(/[a-zA-Z0-9]/g),
   //VIN
-  'H': new RegExp(/[0-9авекмнорстухАВЕКМНОРТСУХ]/g) //Number and vehicle registration plate
+  'H': new RegExp(/[0-9авекмнорстухАВЕКМНОРТСУХ]/g),
+  //Number and vehicle registration plate
+  'R': new RegExp(/[0-9А-Яа-я]/g) //Russian and number
 
 };
 let regexpStr = '[' + Object.keys(bindingPatterns).join('') + ']';
