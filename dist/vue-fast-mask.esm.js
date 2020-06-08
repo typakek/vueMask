@@ -7,15 +7,15 @@ let bindingPatterns = {
   //Number
   'A': new RegExp(/[А-Яа-яA-Za-z]/g),
   //Any letter
-  'S': new RegExp(/[авекмнорстухАВЕКМНОРТСУХ]/g),
+  'S': new RegExp(/[abekmhopctyxABEKMHOPTCYX]/g),
   //Vehicle registration plate
   'V': new RegExp(/[a-zA-Z0-9]/g),
   //VIN
-  'H': new RegExp(/[0-9авекмнорстухАВЕКМНОРТСУХ]/g),
+  'H': new RegExp(/[0-9abekmhopctyxABEKMHOPTCYX]/g),
   //Number and vehicle registration plate
   'R': new RegExp(/[0-9А-Яа-я]/g),
   //Russian and number
-  'B': new RegExp(/[abeikmhopctxАВЕІКМНОРСТХ]/g) //Belarus number
+  'B': new RegExp(/[abeikmhopctxABEIKMHOPCTX]/g) //Belarus number
 
 };
 let regexpStr = '[' + Object.keys(bindingPatterns).join('') + ']';
