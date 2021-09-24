@@ -4,6 +4,7 @@ let bindingPatterns = {
     'N': new RegExp(/[0-9]/g),                          //Number
     'A': new RegExp(/[А-Яа-яA-Za-z]/g),                 //Any letter
     'S': new RegExp(/[abekmhopctyxABEKMHOPTCYX]/g),     //Vehicle registration plate
+    'U': new RegExp(/[abekmhopctyxiABEKMHOPTCYXI]/g),   //Belarus vehicle registration plate
     'V': new RegExp(/[a-zA-Z0-9]/g),                    //VIN
     'H': new RegExp(/[0-9abekmhopctyxABEKMHOPTCYX]/g),  //Number and vehicle registration plate
     'R': new RegExp(/[0-9А-Яа-я]/g),                    //Russian and number
